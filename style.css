@@ -15,7 +15,7 @@ body {
   margin: 0;
 }
 
-.main-header {
+.main_header {
   background: var(--card-bg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
@@ -108,3 +108,194 @@ footer {
   color: #737373;
   font-size: 0.95rem;
 }
+
+/* Header / brand styles (refined for centered nav and CTA on right) */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 2rem; /* increase header padding to make it taller */
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  min-width: 0;
+}
+
+.header-center {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.header-right {
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.logo {
+  width: 64px; /* larger logo */
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.brand-name {
+  font-size: 1.25rem; /* slightly larger brand text */
+  font-weight: 800;
+}
+
+.primary-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 1.2rem; /* more spacing between links */
+  font-weight: 700;
+  font-size: 1.05rem; /* larger nav text */
+  padding: 0.25rem 0.15rem;
+}
+
+.login-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 0.6rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--accent);
+  padding: 0.55rem 1.05rem; /* larger CTA */
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  font-size: 0.98rem;
+}
+
+/* Transitions and hover states */
+.primary-nav a,
+.login-link,
+.cta-btn,
+.brand-name {
+  transition: color 160ms ease, transform 160ms ease, opacity 160ms ease;
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+  color: #222222;
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.login-link:hover,
+.login-link:focus {
+  color: #222222;
+  text-decoration: underline;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.logo {
+  transition: transform 220ms cubic-bezier(.2,.9,.25,1), box-shadow 220ms ease;
+}
+
+.logo:hover,
+.logo:focus {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+}
+
+@media (max-width: 1100px) {
+  /* reduce spacing and sizes a touch on medium screens */
+  .logo { width: 56px; height: 56px; }
+  .primary-nav a { margin: 0 0.9rem; font-size: 1rem; }
+  .cta-btn { padding: 0.5rem 0.9rem; }
+}
+
+@media (max-width: 900px) {
+  .primary-nav a { display: none; }
+}
+
+@media (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .header-center { order: 2; }
+  .header-right { order: 3; justify-content: flex-start; }
+}
+
+/* Logo modal / lightbox styles */
+.logo-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.logo-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.logo-modal-inner {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-modal img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  display: block;
+}
+
+.logo-modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.logo-modal-close:focus { outline: 2px solid #fff99a; }
+

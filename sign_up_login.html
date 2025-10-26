@@ -4,51 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registration Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #333;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #555;
-    }
-  </style>
+  <!-- Use the main stylesheet for consistent header and layout -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="main-header">
+    <div class="header-left">
+      <a class="brand" href="./index.html">
+        <picture>
+          <source srcset="assets/workbanana.webp" type="image/webp">
+          <source srcset="assets/workbanana.png" type="image/png">
+          <a href="assets/workbanana.svg" target="_blank">
+            <img class="logo" src="assets/workbanana.svg" alt="workbanana logo" />
+          </a>
+        </picture>
+        <span class="brand-name">workbanana</span>
+      </a>
+    </div>
+
+    <div class="header-center">
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <a href="#">How it Works</a>
+        <a href="#">Sample Jobs</a>
+        <a href="#">Pricing</a>
+        <a href="#">Testimonials</a>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <a class="login-link" href="#">Login</a>
+      <a class="cta-btn" href="#">Get Leads</a>
+    </div>
+  </header>
+
   <div class="container">
     <h2>Register</h2>
     <form action="/submit_registration" method="POST">
@@ -67,5 +55,10 @@
       <button type="submit">Register</button>
     </form>
   </div>
+  <div>
+     <p> as a freelancer or client, post your projects, and connect with professionals to get your work done efficiently.</p>
+  </div>
+
+
 </body>
 </html>
