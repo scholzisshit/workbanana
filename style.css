@@ -1,0 +1,110 @@
+:root {
+  --primary: #ffec44;
+  --accent: #111111;
+  --bg: #f7f7f7;
+  --card-bg: #fff;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --radius: 16px;
+  --mono: 'Roboto Mono', monospace;
+}
+
+body {
+  background: var(--bg);
+  font-family: var(--mono);
+  color: var(--accent);
+  margin: 0;
+}
+
+.main-header {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 2.4rem;
+  margin: 1.5rem;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+}
+
+.hero {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: var(--mono);
+  cursor: pointer;
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background: #fff99a;
+}
+
+.listing-preview {
+  margin: 2rem;
+}
+
+.listing-card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-meta {
+  font-size: 0.95rem;
+  color: #737373;
+}
+
+.card-action {
+  background: var(--primary);
+  color: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 1.3rem;
+  font-family: var(--mono);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+
+.card-action:hover {
+  background: #fff99a;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  color: #737373;
+  font-size: 0.95rem;
+}
