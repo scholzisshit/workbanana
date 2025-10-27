@@ -299,3 +299,108 @@ footer {
 
 .logo-modal-close:focus { outline: 2px solid #fff99a; }
 
+
+  /* Basic Reset and Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0; padding: 0;
+  background: #fff;
+  color: #222;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+h1, h2, h3, h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+strong {
+  font-weight: 700;
+}
+/* Section heading underlined */
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.25rem;
+}
+/* Job offer list */
+.job-list {
+  margin-bottom: 1.5rem;
+}
+.job {
+  background: #f9f9f9;
+  border-left: 6px solid #2a9d8f;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.job-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.job-details {
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  color: #555;
+}
+/* Table for comparison */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #e9f5f2;
+  font-weight: 600;
+}
+/* Testimonials */
+blockquote {
+  background: #f0f4f3;
+  border-left: 5px solid #2a9d8f;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  font-style: italic;
+}
+cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: 600;
+}
+/* Button style */
+.btn-primary {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.btn-primary:hover {
+  background-color: #237a74;
+}
+/* Footer note */
+.footer-note {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+}
