@@ -37,7 +37,7 @@ nav a {
   background: var(--card-bg);
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  padding: 2.5rem;
+  padding: 2.5rem;  
   text-align: center;
   margin: 2rem;
 }
