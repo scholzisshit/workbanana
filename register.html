@@ -3,101 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMNIMART - Register</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="photos/logo.png">
+    <meta name="description" content="Create your WorkBanana account">
+    <title>Sign Up - WorkBanana</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo"><img src="photos/logo.png" height="50px" alt=""><a href="index.html">OMNIMART</a></div>
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html" class="active">Register</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Register Section -->
-    <section class="auth-section register-section">
-        <div class="container">
-            <form class="auth-form fade-in-up">
-                <h2>Create Your OMNIMART Account</h2>
-                <div class="form-group">
-                    <label for="register-username">Username:</label>
-                    <input type="text" id="register-username" placeholder="Choose a unique username" required>
+    
+    <div class="register-page">
+        <div class="register-container">
+            <div class="register-card">
+                <div class="auth-header">
+                    <div class="auth-logo">🍌</div>
+                    <h1 class="auth-title">Join WorkBanana</h1>
+                    <p class="auth-subtitle">Create your account in just a few steps</p>
                 </div>
-                <div class="form-group">
-                    <label for="register-email">Email Address:</label>
-                    <input type="email" id="register-email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="register-password">Password:</label>
-                    <input type="password" id="register-password" placeholder="Create a strong password" required>
-                </div>
-                <div class="form-group">
-                    <label for="register-confirm-password">Confirm Password:</label>
-                    <input type="password" id="register-confirm-password" placeholder="Confirm your password" required>
-                </div>
-                <div class="form-options terms-agreement">
-                    <label class="checkbox-container">I agree to the <a href="#">Terms & Conditions</a>
-                        <input type="checkbox" required>
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-                <a href="home.html" type="submit" class="btn-primary auth-submit-btn">Register</a>
-                <p class="auth-switch-text">Already have an account? <a href="login.html">Login Here</a></p>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col about-us">
-                    <h3>About OMNIMART</h3>
-                    <p>Your premier destination for buying and selling unique digital assets. We connect creators with enthusiasts.</p>
-                </div>
-                <div class="footer-col quick-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col categories">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="products.html?category=art">Digital Art</a></li>
-                        <li><a href="products.html?category=3d">3D Models</a></li>
-                        <li><a href="products.html?category=audio">Audio & Music</a></li>
-                        <li><a href="products.html?category=code">Code & Scripts</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col social-connect">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=T" alt="Twitter"></a>
-                        <a href="#" aria-label="Discord"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=D" alt="Discord"></a>
-                        <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=I" alt="Instagram"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=L" alt="LinkedIn"></a>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-line" id="progressLine"></div>
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">1</div>
+                        <span class="step-label">Account</span>
                     </div>
-                    <p class="copyright">&copy; 2023 OMNIMART. All rights reserved.</p>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">2</div>
+                        <span class="step-label">Profile</span>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">3</div>
+                        <span class="step-label">Complete</span>
+                    </div>
+                </div>
+                
+                <!-- Multi-step Form -->
+                <form class="auth-form" id="registerForm">
+                    <div class="form-steps">
+                        <!-- Step 1: Account Details -->
+                        <div class="form-step active" data-step="1">
+                            <h2 class="step-title">Account Details</h2>
+                            <p class="step-description">Let's start with your basic information</p>
+                            
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    class="form-input" 
+                                    placeholder="John Doe"
+                                    required
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    placeholder="you@example.com"
+                                    required
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    placeholder="Create a strong password"
+                                    required
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input 
+                                    type="password" 
+                                    id="confirmPassword" 
+                                    name="confirmPassword" 
+                                    class="form-input" 
+                                    placeholder="Re-enter your password"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Profile Type -->
+                        <div class="form-step" data-step="2">
+                            <h2 class="step-title">Choose Your Profile</h2>
+                            <p class="step-description">Are you here to work or hire?</p>
+                            
+                            <div class="profile-types">
+                                <div class="profile-type-card" data-type="freelancer">
+                                    <div class="profile-type-icon">💼</div>
+                                    <h3 class="profile-type-name">Freelancer</h3>
+                                    <p class="profile-type-description">
+                                        Find projects and work with great clients
+                                    </p>
+                                </div>
+                                
+                                <div class="profile-type-card" data-type="client">
+                                    <div class="profile-type-icon">🎯</div>
+                                    <h3 class="profile-type-name">Client</h3>
+                                    <p class="profile-type-description">
+                                        Hire talented freelancers for your projects
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <input type="hidden" id="profileType" name="profileType" required>
+                            
+                            <div class="form-group" style="margin-top: 2rem;">
+                                <label for="skills" class="form-label">Primary Skills (Freelancers) / Industry (Clients)</label>
+                                <input 
+                                    type="text" 
+                                    id="skills" 
+                                    name="skills" 
+                                    class="form-input" 
+                                    placeholder="e.g., Web Development, Graphic Design"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="terms" required>
+                                    <span class="checkbox-box"></span>
+                                    <span>I agree to the <a href="terms.html" style="color: var(--accent);">Terms of Service</a> and <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Success -->
+                        <div class="form-step" data-step="3">
+                            <div class="success-animation">
+                                <div class="success-icon">✓</div>
+                                <h2 class="step-title">Welcome to WorkBanana!</h2>
+                                <p class="step-description">
+                                    Your account has been created successfully. Get ready to explore amazing opportunities.
+                                </p>
+                                <a href="dashboard.html" class="btn btn-primary" style="margin-top: 2rem;">Go to Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Form Actions -->
+                    <div class="form-actions" id="formActions">
+                        <button type="button" class="btn-prev" id="prevBtn" style="display: none;">Previous</button>
+                        <button type="button" class="btn-next" id="nextBtn">Continue</button>
+                    </div>
+                </form>
+                
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Sign in</a></p>
                 </div>
             </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="index.html" style="color: var(--text-secondary); font-weight: 600;">← Back to Home</a>
+            </div>
         </div>
-    </footer>
+    </div>
 
+    <!-- JavaScript -->
+    <script src="js/register.js"></script>
 </body>
 </html>

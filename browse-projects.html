@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse thousands of freelance projects on WorkBanana">
+    <title>Browse Projects - WorkBanana</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+
+    <!-- Navigation Bar -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <div class="logo-icon" id="logoIcon" title="Click to view full logo">
+                <img src="workbanana.jpg" alt="WorkBanana Logo">
+            </div>
+            <span class="logo-text">WorkBanana</span>
+        </a>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="browse-projects.html" class="nav-link">Browse Projects</a>
+            <a href="dashboard.html" class="nav-link dashboard-link">
+                <span class="dashboard-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="how-it-works.html" class="nav-link">How It Works</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="login.html" class="nav-link">Sign In</a>
+            <a href="register.html" class="nav-cta">Get Started</a>
+        </div>
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span>🌙</span>
+        </button>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Browse Projects</h1>
+                <p class="page-description">
+                    Discover thousands of high-quality freelance opportunities from trusted clients worldwide
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search projects..."
+                        id="searchInput"
+                    >
+                </div>
+                
+                <select class="filter-select" id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="mobile-dev">Mobile Development</option>
+                    <option value="design">Graphic Design</option>
+                    <option value="writing">Content Writing</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="video">Video Production</option>
+                </select>
+                
+                <select class="filter-select" id="budgetFilter">
+                    <option value="">Any Budget</option>
+                    <option value="0-500">$0 - $500</option>
+                    <option value="500-1000">$500 - $1,000</option>
+                    <option value="1000-2500">$1,000 - $2,500</option>
+                    <option value="2500+">$2,500+</option>
+                </select>
+                
+                <select class="filter-select" id="durationFilter">
+                    <option value="">Any Duration</option>
+                    <option value="short">Less than 1 week</option>
+                    <option value="medium">1-4 weeks</option>
+                    <option value="long">1-3 months</option>
+                    <option value="ongoing">Ongoing</option>
+                </select>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                        <span>▦</span>
+                    </button>
+                    <button class="view-btn" data-view="list" aria-label="List view">
+                        <span>☰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Modern SaaS Dashboard Design</h3>
+                                <div class="project-tags">
+                                    <span class="tag">UI/UX Design</span>
+                                    <span class="tag tag-orange">Figma</span>
+                                </div>
+                            </div>
+                            <div class="project-budget">$1,800</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            We're looking for an experienced UI/UX designer to create a modern, intuitive dashboard for our SaaS platform. The design should be clean, professional, and follow current design trends.
+                        </p>
+                        
+                        <div class="project-footer">
+                            <div class="project-meta">
+                                <span>📍 Remote</span>
+                                <span>⏱️ 3 weeks</span>
+                                <span>👤 12 proposals</span>
+                            </div>
+                            <button class="apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">E-commerce Platform Development</h3>
+                                <div class="project-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag tag-yellow">Node.js</span>
+                                </div>
+                            </div>
+                            <div class="project-budget">$4,500</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Build a full-stack e-commerce platform with React frontend and Node.js backend. Must include payment integration, admin dashboard, and responsive design.
+                        </p>
+                        
+                        <div class="project-footer">
+                            <div class="project-meta">
+                                <span>📍 Remote</span>
+                                <span>⏱️ 2 months</span>
+                                <span>👤 8 proposals</span>
+                            </div>
+                            <button class="apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Brand Identity Package</h3>
+                                <div class="project-tags">
+                                    <span class="tag tag-orange">Branding</span>
+                                    <span class="tag">Logo Design</span>
+                                </div>
+                            </div>
+                            <div class="project-budget">$1,200</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Create a complete brand identity for a new tech startup including logo, color palette, typography guidelines, and brand style guide.
+                        </p>
+                        
+                        <div class="project-footer">
+                            <div class="project-meta">
+                                <span>📍 Remote</span>
+                                <span>⏱️ 2 weeks</span>
+                                <span>👤 15 proposals</span>
+                            </div>
+                            <button class="apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Mobile App Development (iOS & Android)</h3>
+                                <div class="project-tags">
+                                    <span class="tag">React Native</span>
+                                    <span class="tag tag-yellow">Mobile</span>
+                                </div>
+                            </div>
+                            <div class="project-budget">$6,000</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Develop a cross-platform mobile app for fitness tracking. Need experienced React Native developer with portfolio of published apps.
+                        </p>
+                        
+                        <div class="project-footer">
+                            <div class="project-meta">
+                                <span>📍 Remote</span>
+                                <span>⏱️ 3 months</span>
+                                <span>👤 6 proposals</span>
+                            </div>
+                            <button class="apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">SEO Content Writing Series</h3>
+                                <div class="project-tags">
+                                    <span class="tag tag-yellow">Content Writing</span>
+                                    <span class="tag">SEO</span>
+                                </div>
+                            </div>
+                            <div class="project-budget">$900</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Write 15 SEO-optimized blog posts about digital marketing. Each article should be 1500-2000 words with keyword research and optimization.
+                        </p>
+                        
+                        <div class="project-footer">
+                            <div class="project-meta">
+                                <span>📍 Remote</span>
+                                <span>⏱️ 4 weeks</span>
+                                <span>👤 20 proposals</span>
+                            </div>
+                            <button class="apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Video Editing for YouTube Channel</h3>
+                                <div class="project-tags">
+                                    <span class="tag tag-orange">Video Editing</span>
+                                    <span class="tag">Premiere Pro</span>
+                                </div>
+                            </div>
+                            <div class="project-budget">$750</div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Edit 10 YouTube videos with professional transitions, color grading, and motion graphics. Experience with tech content preferred.
+                        </p>
+                        
+                        <div class="project-footer">
+                            <div class="project-meta">
+                                <span>📍 Remote</span>
+                                <span>⏱️ 3 weeks</span>
+                                <span>👤 10 proposals</span>
+                            </div>
+                            <button class="apply-btn">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn">←</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>WorkBanana</h3>
+                    <p>Empowering freelancers and connecting talent with opportunity.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">👥</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Freelancers</h3>
+                    <ul>
+                        <li><a href="#">Find Work</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Clients</h3>
+                    <ul>
+                        <li><a href="#">Post a Project</a></li>
+                        <li><a href="#">Find Talent</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorkBanana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

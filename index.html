@@ -1,72 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>workbanana - Freelancing Marketplace</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="main-header">
-      <div class="header-left">
-        <a class="brand" href="index.html">
-          <picture>
-            <!-- Replace with a Pinterest tattoo/toy/tech image as needed -->
-            <img class="logo" src="https://i.pinimg.com/originals/ae/ab/aeab687e72e9c8.jpg" alt="workbanana logo" />
-          </picture>
-          <span class="brand-name">&nbsp;workbanana</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WorkBanana - Premium freelancing platform connecting talented freelancers with quality projects">
+    <title>WorkBanana - Find Your Next Freelance Opportunity</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <div class="logo-icon" id="logoIcon" title="Click to view full logo">
+                <img src="workbanana.jpg" alt="WorkBanana Logo">
+            </div>
+            <span class="logo-text">WorkBanana</span>
         </a>
-      </div>
-      <div class="header-center">
-        <nav class="primary-nav" role="navigation" aria-label="Primary">
-          <a href="Howitworks.html">How it Works</a>
-          <a href="Jobs.html">Sample</a>
-          <a href="Pricing.html">Pricing</a>
-          <a href="Testimonials.html">Testimonials</a>
-        </nav>
-      </div>
-      <div class="header-right">
-        <a class="login-link" href="Login.html">Login</a>
-        <a class="cta-btn" href="GetLeads.html">Get Leads</a>
-      </div>
-    </header>
-    <main>
-      <section class="hero">
-        <h2>Freelancing made playful.</h2>
-        <p>
-          Discover unique projects, creative freelancers, and a fresh new vibe.
-        </p>
-        <a href="sign_up_login.html">
-          <button class="primary-btn">Get Started</button>
-        </a>
-      </section>
-      <section class="listing-preview">
-        <div class="listing-card">
-          <img class="card-img" src="https://i.pinimg.com/originals/8e/16/8e168ceef61486c290d2c7e1c69129fd.jpg" alt="Tattoo Art" />
-          <span class="card-title">Tattoo Designer</span>
-          <span class="card-meta">Design • 2 days left</span>
-          <button class="card-action">View</button>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="browse-projects.html" class="nav-link">Browse Projects</a>
+            <a href="dashboard.html" class="nav-link dashboard-link">
+                <span class="dashboard-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="how-it-works.html" class="nav-link">How It Works</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="login.html" class="nav-link">Sign In</a>
+            <a href="register.html" class="nav-cta">Get Started</a>
         </div>
-        <div class="listing-card">
-          <img class="card-img" src="https://i.pinimg.com/originals/a1/f0/a1f03adc64cdeace6efe9095a9df963e.jpg" alt="Tech Toy" />
-          <span class="card-title">Toy Prototype</span>
-          <span class="card-meta">Tech • 5 days left</span>
-          <button class="card-action">View</button>
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span>🌙</span>
+        </button>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Find Your Perfect
+                        <span class="highlight">Freelance Gig</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Connect with top clients, work on exciting projects, and build your career on your own terms. Join thousands of freelancers already thriving on WorkBanana.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="register.html" class="btn btn-primary">Start Freelancing</a>
+                        <a href="browse-projects.html" class="btn btn-secondary">Browse Projects</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/hero-illustration.svg" alt="Freelancer working" class="hero-image">
+                </div>
+            </div>
         </div>
-        <div class="listing-card">
-          <img class="card-img" src="https://i.pinimg.com/originals/e8/3d/e83d42cc84d85d083620b3dac77ef0b5.jpg" alt="Gadget Review" />
-          <span class="card-title">Gadget Reviewer</span>
-          <span class="card-meta">Review • 1 day left</span>
-          <button class="card-action">View</button>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">12K+</div>
+                    <div class="stat-label">Active Freelancers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8K+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$5M+</div>
+                    <div class="stat-label">Total Paid Out</div>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-note">
-        &copy; 2025 workbanana &mdash; made for creative freelancers
-      </div>
+    </section>
+
+    <!-- Featured Opportunities -->
+    <section class="opportunities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Opportunities</h2>
+                <p class="section-subtitle">Discover high-quality projects from trusted clients across various industries</p>
+            </div>
+            
+            <div class="opportunities-grid">
+                <!-- Opportunity Card 1 -->
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <span class="tag">Web Development</span>
+                        <span class="opportunity-price">$2,500</span>
+                    </div>
+                    <h3 class="card-title">E-commerce Website Redesign</h3>
+                    <p class="card-description">
+                        Looking for an experienced frontend developer to redesign our e-commerce platform with modern UI/UX principles. Must have experience with React and responsive design.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-meta">📍 Remote</span>
+                        <span class="card-meta">⏱️ 4 weeks</span>
+                    </div>
+                </div>
+
+                <!-- Opportunity Card 2 -->
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <span class="tag tag-orange">Graphic Design</span>
+                        <span class="opportunity-price">$1,200</span>
+                    </div>
+                    <h3 class="card-title">Brand Identity Package</h3>
+                    <p class="card-description">
+                        Seeking a creative designer to develop a complete brand identity including logo, color palette, typography, and brand guidelines for a tech startup.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-meta">📍 Remote</span>
+                        <span class="card-meta">⏱️ 2 weeks</span>
+                    </div>
+                </div>
+
+                <!-- Opportunity Card 3 -->
+                <div class="opportunity-card">
+                    <div class="opportunity-header">
+                        <span class="tag tag-yellow">Content Writing</span>
+                        <span class="opportunity-price">$800</span>
+                    </div>
+                    <h3 class="card-title">Blog Content Series</h3>
+                    <p class="card-description">
+                        Need a skilled writer to create a 10-article blog series about digital marketing trends. Experience with SEO and engaging storytelling required.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-meta">📍 Remote</span>
+                        <span class="card-meta">⏱️ 3 weeks</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="browse-projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Start earning on WorkBanana in three simple steps</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Create Your Profile</h3>
+                    <p class="step-description">
+                        Sign up and build your professional profile showcasing your skills, experience, and portfolio. Stand out to potential clients.
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Browse & Apply</h3>
+                    <p class="step-description">
+                        Explore thousands of projects matching your expertise. Submit proposals and connect with clients looking for your skills.
+                    </p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Get Paid Securely</h3>
+                    <p class="step-description">
+                        Complete projects, deliver quality work, and receive payments securely through our platform. Build your reputation and grow.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Freelancers Say</h2>
+                <p class="section-subtitle">Real stories from our thriving community</p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "WorkBanana has transformed my freelancing career. The quality of clients and projects is outstanding, and the payment process is seamless."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/avatar-1.jpg" alt="Sarah Chen" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "As a designer, finding the right clients was always challenging. WorkBanana connected me with businesses that truly value creative work."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/avatar-2.jpg" alt="Marcus Rodriguez" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Marcus Rodriguez</h4>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The platform is intuitive, professional, and the community support is amazing. I've doubled my freelance income in just six months."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/avatar-3.jpg" alt="Emily Watson" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Emily Watson</h4>
+                            <p>Content Strategist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Freelance Journey?</h2>
+                <p class="cta-description">
+                    Join WorkBanana today and connect with clients who value your expertise. It's free to get started.
+                </p>
+                <a href="register.html" class="cta-button">Create Your Free Account</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>WorkBanana</h3>
+                    <p>Empowering freelancers and connecting talent with opportunity.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Facebook">👥</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Freelancers</h3>
+                    <ul>
+                        <li><a href="#">Find Work</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>For Clients</h3>
+                    <ul>
+                        <li><a href="#">Post a Project</a></li>
+                        <li><a href="#">Find Talent</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 WorkBanana. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
-  </body>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
 

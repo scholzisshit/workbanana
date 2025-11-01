@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your WorkBanana Dashboard">
+    <title>Dashboard - WorkBanana</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="navbar-logo">
+            <div class="logo-icon" id="logoIcon" title="Click to view full logo">
+                <img src="workbanana.jpg" alt="WorkBanana Logo">
+            </div>
+            <span class="logo-text">WorkBanana</span>
+        </a>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="browse-projects.html" class="nav-link">Browse Projects</a>
+            <a href="dashboard.html" class="nav-link dashboard-link">
+                <span class="dashboard-icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="how-it-works.html" class="nav-link">How It Works</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="login.html" class="nav-link">Sign In</a>
+            <a href="register.html" class="nav-cta">Get Started</a>
+        </div>
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span>🌙</span>
+        </button>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="profile-summary">
+                <img src="images/user-avatar.jpg" alt="Profile" class="profile-avatar">
+                <h3 class="profile-name">John Doe</h3>
+                <p class="profile-title">Full Stack Developer</p>
+                <div class="profile-rating">
+                    ⭐⭐⭐⭐⭐ <span>5.0 (24 reviews)</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#overview" class="sidebar-link active">
+                    <span>📊</span>
+                    <span>Overview</span>
+                </a>
+                <a href="#projects" class="sidebar-link">
+                    <span>💼</span>
+                    <span>Active Projects</span>
+                </a>
+                <a href="#proposals" class="sidebar-link">
+                    <span>📝</span>
+                    <span>My Proposals</span>
+                </a>
+                <a href="#earnings" class="sidebar-link">
+                    <span>💰</span>
+                    <span>Earnings</span>
+                </a>
+                <a href="#portfolio" class="sidebar-link">
+                    <span>🎨</span>
+                    <span>Portfolio</span>
+                </a>
+                <a href="#settings" class="sidebar-link">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Stats Cards -->
+            <section class="stats-overview">
+                <h2 class="section-title">Your Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">💼</div>
+                        <div class="stat-content">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label">Active Projects</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-content">
+                            <div class="stat-value">42</div>
+                            <div class="stat-label">Completed Jobs</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-content">
+                            <div class="stat-value">$18.5K</div>
+                            <div class="stat-label">Total Earned</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-content">
+                            <div class="stat-value">5.0</div>
+                            <div class="stat-label">Avg Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Projects -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2 class="section-title">Active Projects</h2>
+                    <a href="my-projects.html" class="section-link">View All →</a>
+                </div>
+                
+                <div class="projects-list">
+                    <div class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-name">E-commerce Dashboard Redesign</h3>
+                            <p class="project-client">Client: TechStart Inc.</p>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <span class="progress-text">65% Complete</span>
+                        </div>
+                        <div class="project-actions">
+                            <span class="project-deadline">Due: 5 days</span>
+                            <button class="btn-small btn-primary">Continue</button>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-info">
+                            <h3 class="project-name">Mobile App Development</h3>
+                            <p class="project-client">Client: FitLife App</p>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="progress-text">40% Complete</span>
+                        </div>
+                        <div class="project-actions">
+                            <span class="project-deadline">Due: 12 days</span>
+                            <button class="btn-small btn-primary">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="dashboard-section">
+                <h2 class="section-title">Recent Activity</h2>
+                
+                <div class="activity-timeline">
+                    <div class="activity-item">
+                        <div class="activity-icon">✅</div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">Project Milestone Completed</h4>
+                            <p class="activity-description">Completed Phase 2 of E-commerce Dashboard project</p>
+                            <span class="activity-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">💬</div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">New Message</h4>
+                            <p class="activity-description">Client sent feedback on the latest designs</p>
+                            <span class="activity-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">⭐</div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">New Review Received</h4>
+                            <p class="activity-description">5-star review from Marketing Agency Pro</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">💰</div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">Payment Received</h4>
+                            <p class="activity-description">$2,500 for Brand Identity project</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="dashboard-section">
+                <h2 class="section-title">Quick Actions</h2>
+                
+                <div class="quick-actions-grid">
+                    <a href="browse-projects.html" class="action-card">
+                        <div class="action-icon">🔍</div>
+                        <h3 class="action-title">Find New Projects</h3>
+                        <p class="action-description">Browse available opportunities</p>
+                    </a>
+                    
+                    <a href="submit-proposal.html" class="action-card">
+                        <div class="action-icon">📝</div>
+                        <h3 class="action-title">Submit Proposal</h3>
+                        <p class="action-description">Apply to projects you love</p>
+                    </a>
+                    
+                    <a href="profile.html" class="action-card">
+                        <div class="action-icon">👤</div>
+                        <h3 class="action-title">Update Profile</h3>
+                        <p class="action-description">Keep your profile current</p>
+                    </a>
+                    
+                    <a href="portfolio.html" class="action-card">
+                        <div class="action-icon">🎨</div>
+                        <h3 class="action-title">Add Portfolio</h3>
+                        <p class="action-description">Showcase your best work</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
