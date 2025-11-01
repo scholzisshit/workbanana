@@ -1,19 +1,30 @@
 :root {
   --primary: #ffec44;
   --accent: #111111;
-  --bg: #f7f7f7;
-  --card-bg: #fff;
-  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --bg: #a97c50; /* keep wood fallback */
+  --card-bg: #f6e7d7; /* light beige replaces white */
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   --radius: 16px;
   --mono: 'Roboto Mono', monospace;
 }
 
-body {
+
+/* body {
   background: var(--bg);
   font-family: var(--mono);
   color: var(--accent);
   margin: 0;
+} */
+
+body {
+  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), #a97c50;
+  /* Fallback color complements wood grain if image doesn't load */
+  font-family: var(--mono);
+  color: var(--accent);
+  margin: 0;
+  background-size: 600px 600px;
 }
+
 
 /* Header styles */
 .main-header {
@@ -34,21 +45,9 @@ body {
   display: flex;
   align-items: center;
 }
-
-.header-left {
-  min-width: 0;
-}
-
-.header-center {
-  flex: 1 1 auto;
-  justify-content: center;
-}
-
-.header-right {
-  gap: 1rem;
-  justify-content: flex-end;
-}
-
+.header-left { min-width: 0; }
+.header-center { flex: 1 1 auto; justify-content: center; }
+.header-right { gap: 1rem; justify-content: flex-end; }
 .brand {
   display: flex;
   align-items: center;
@@ -56,7 +55,6 @@ body {
   text-decoration: none;
   color: var(--accent);
 }
-
 .logo {
   width: 64px;
   height: 64px;
@@ -65,19 +63,16 @@ body {
   box-shadow: var(--shadow);
   transition: transform 220ms cubic-bezier(.2,.9,.25,1), box-shadow 220ms ease;
 }
-
 .logo:hover,
 .logo:focus {
   transform: scale(1.04) rotate(-1deg);
   box-shadow: 0 10px 30px rgba(0,0,0,0.14);
 }
-
 .brand-name {
   font-size: 1.25rem;
   font-weight: 800;
   transition: color 160ms ease, transform 160ms ease, opacity 160ms ease;
 }
-
 .primary-nav a {
   color: var(--accent);
   text-decoration: none;
@@ -87,14 +82,12 @@ body {
   padding: 0.25rem 0.15rem;
   transition: color 160ms ease, transform 160ms ease, opacity 160ms ease;
 }
-
 .primary-nav a:hover,
 .primary-nav a:focus {
   color: #222222;
   transform: translateY(-2px);
   opacity: 0.95;
 }
-
 .login-link {
   color: var(--accent);
   text-decoration: none;
@@ -102,13 +95,11 @@ body {
   margin-right: 0.6rem;
   transition: color 160ms ease;
 }
-
 .login-link:hover,
 .login-link:focus {
   color: #222222;
   text-decoration: underline;
 }
-
 .cta-btn {
   display: inline-block;
   background: var(--primary);
@@ -121,13 +112,11 @@ body {
   font-size: 0.98rem;
   transition: color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
-
 .cta-btn:hover,
 .cta-btn:focus {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
-
 /* Hero section */
 .hero {
   background: var(--card-bg);
@@ -137,7 +126,6 @@ body {
   text-align: center;
   margin: 2rem;
 }
-
 .primary-btn {
   background: var(--primary);
   color: var(--accent);
@@ -151,7 +139,6 @@ body {
   box-shadow: var(--shadow);
   transition: background 0.2s;
 }
-
 .primary-btn:hover {
   background: #fff99a;
 }
@@ -160,7 +147,6 @@ body {
 .listing-preview {
   margin: 2rem;
 }
-
 .listing-card {
   background: var(--card-bg);
   box-shadow: var(--shadow);
@@ -170,20 +156,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
+  transform: rotate(-1.5deg);
+  transition: transform 0.16s, box-shadow 0.16s;
 }
-
+.listing-card:hover {
+  transform: scale(1.03) rotate(0deg);
+  box-shadow: 0 10px 36px rgba(255, 204, 0, 0.16);
+}
+.card-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
 .card-title {
   font-size: 1.2rem;
   font-weight: 700;
 }
-
 .card-meta {
   font-size: 0.95rem;
   color: #737373;
   margin-left: 10px;
   margin-right: auto;
 }
-
 .card-action {
   background: var(--primary);
   color: var(--accent);
@@ -196,11 +193,9 @@ body {
   box-shadow: var(--shadow);
   transition: background 0.2s;
 }
-
 .card-action:hover {
   background: #fff99a;
 }
-
 /* Footer */
 footer {
   text-align: center;
@@ -208,24 +203,20 @@ footer {
   color: #737373;
   font-size: 0.95rem;
 }
-
 .footer-note {
   margin-top: 2rem;
   font-size: 0.85rem;
   color: #777;
 }
-
 /* Responsive adjustments */
 @media (max-width: 1100px) {
   .logo { width: 56px; height: 56px; }
   .primary-nav a { margin: 0 0.9rem; font-size: 1rem; }
   .cta-btn { padding: 0.5rem 0.9rem; }
 }
-
 @media (max-width: 900px) {
   .primary-nav a { display: none; }
 }
-
 @media (max-width: 700px) {
   .main-header {
     flex-direction: column;

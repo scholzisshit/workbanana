@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMNIMART - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="photos/logo.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img src="photos/logo.png" height="50px"><a href="home.html">OMNIMART</a></div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section login-section">
+        <div class="container">
+            <form class="auth-form fade-in-up">
+                <h2>Login to Your Account</h2>
+                <div class="form-group">
+                    <label for="login-email">Email Address:</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-container">Remember Me
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <a href="home.html" type="submit" class="btn-primary auth-submit-btn">Login</a>
+                <p class="auth-switch-text">Don't have an account? <a href="register.html">Register Here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-us">
+                    <h3>About OMNIMART</h3>
+                    <p>Your premier destination for buying and selling unique digital assets. We connect creators with enthusiasts.</p>
+                </div>
+                <div class="footer-col quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="products.html?category=art">Digital Art</a></li>
+                        <li><a href="products.html?category=3d">3D Models</a></li>
+                        <li><a href="products.html?category=audio">Audio & Music</a></li>
+                        <li><a href="products.html?category=code">Code & Scripts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col social-connect">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=T" alt="Twitter"></a>
+                        <a href="#" aria-label="Discord"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=D" alt="Discord"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=I" alt="Instagram"></a>
+                        <a href="#" aria-label="LinkedIn"><img src="https://via.placeholder.com/24/00baff/0b0f19?text=L" alt="LinkedIn"></a>
+                    </div>
+                    <p class="copyright">&copy; 2025 OMNIMART. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
