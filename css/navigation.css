@@ -14,9 +14,19 @@
   transition: all var(--transition-base);
 }
 
+body.dark-mode .navbar {
+  background-color: rgba(15, 15, 15, 0.7);
+  border-bottom: 1px solid rgba(184, 168, 150, 0.2);
+}
+
 .navbar.scrolled {
   background-color: rgba(245, 241, 232, 0.85);
   box-shadow: var(--shadow-md);
+}
+
+body.dark-mode .navbar.scrolled {
+  background-color: rgba(15, 15, 15, 0.85);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-container {
@@ -123,6 +133,11 @@
 
 .nav-link:hover::after,
 .nav-link.active::after {
+  width: 100%;
+}
+
+/* Ensure Home link has active state */
+.nav-link[href="index.html"].active::after {
   width: 100%;
 }
 
@@ -310,6 +325,10 @@
     box-shadow: var(--shadow-lg);
     max-height: calc(100vh - 80px);
     overflow-y: auto;
+  }
+
+  body.dark-mode .nav-links {
+    background: rgba(15, 15, 15, 0.98);
   }
   
   .nav-links.active {
