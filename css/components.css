@@ -278,3 +278,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.author-avatar {
+    width: 60px;    /* Adjust width as needed */
+    height: 60px;   /* Adjust height as needed */
+    object-fit: cover;  /* Ensures the image covers the container without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    display: block;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    max-height: 1000px; /* Adjust as needed */
+    object-fit: cover; /* Ensures the video covers the container without distortion */
+    border-radius: 12px; /* Adds rounded corners for a modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: block;
+    margin: 0 auto; /* Centers the video */
+}
