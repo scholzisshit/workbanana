@@ -106,39 +106,25 @@ body.dark-mode .navbar.scrolled {
 }
 
 .nav-link {
-  position: relative;
   font-weight: 500;
   font-size: 1rem;
   color: var(--text-secondary);
-  padding: var(--space-xs) 0;
-  transition: color var(--transition-fast);
+  padding: 0.5rem 0;
+  transition: all var(--transition-fast);
   white-space: nowrap;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  position: relative;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent);
-  transition: width var(--transition-base);
+.nav-link:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
 }
 
-.nav-link:hover,
 .nav-link.active {
   color: var(--text-primary);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-/* Ensure Home link has active state */
-.nav-link[href="index.html"].active::after {
-  width: 100%;
+  border-bottom-color: var(--accent);
 }
 
 /* Dashboard Link - Special Styling */
