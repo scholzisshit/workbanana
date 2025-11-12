@@ -1,7 +1,3 @@
-/* ============================================
-   Reusable Components
-   ============================================ */
-
 /* Typography */
 .heading-xl {
   font-family: var(--font-display);
@@ -281,20 +277,18 @@
 
 
 .author-avatar {
-    width: 60px;    /* Adjust width as needed */
-    height: 60px;   /* Adjust height as needed */
-    object-fit: cover;  /* Ensures the image covers the container without distortion */
-    border-radius: 50%; /* Makes the image circular */
+    width: 60px; 
+    height: 60px;   
     display: block;
 }
 
 .hero-video {
     width: 80%;
     height: 600px;
-    max-height: 1000px; /* Adjust as needed */
-    object-fit: cover; /* Ensures the video covers the container without distortion */
-    border-radius: 12px; /* Adds rounded corners for a modern look */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-height: 1000px; 
+    object-fit: cover;             /* Ensures the video covers the container without distortion */
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: block;
-    margin: 0 auto; /* Centers the video */
+    margin: 0 auto; 
 }
